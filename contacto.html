@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>  
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Barberia Alura</title>
+        <!-- esta referencia al archivo reset.css es para eliminar ciertas configuraciónes que el navegador hace por defecto al canvas de mi pagina-->
+        <link rel="stylesheet" href="reset.css">
+        <!-- se debe colocar antes porque se aplica primero-->
+        <link rel="stylesheet" href="style-contact.css">
+    </head>
+
+
+    <body>     
+        <header >
+            <div class="caja">
+                <h1><img src="imagenes/logo.png" alt="Logo de la barbería alura"></h1>
+                <!--alt permite ver el nombre de la imagen en caso de que no carge-->
+                <nav>
+                    <ul >
+                        <li> <a href="index.html"> Home </a></li>
+                        <li> <a href="productos.html"> Productos </a></li>
+                        <li><a href="contacto.html"> Contactos </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <main>
+            <form>
+                 <!--Etiquetas especificas para formularios-->
+                 <!--El label es para el titulo-->
+                 <!--El input tipo text es la cajita vacio-->
+                 <!--Se vinculan por medio de un for y el id-->
+                <label for="nombreapellido">Nombre y Apellido</label>
+                <input type="text" id="nombreapellido" class="padron" required>
+                <!-- el placeholder es para mostrar un ejemplo dentro del input -->
+
+                <label for="correoelectronico">Correo Electrónico</label>
+                <input type="email"  id="correoelectronico" class="padron"required placeholder="email@dominio.com">
+
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" class="padron"required
+                placeholder="(+XXX) XXXXXXXXX">
+                
+                <!--el text area es para crear una cuadro personalizable de tamaño y texto-->
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="70" rows="10" id="mensaje" class="padron"required> </textarea>
+
+                <fieldset>
+                    <!-- el fieldset muestra que todo esta relacionada-->
+                    <legend class="test" id="test">¿Cómo le gustaría que lo contactemos? </p>
+                        <!--legend es similar a la etiqueta p dentro del fieldset-->
+
+                    <!--Para agregar un chek button circular usamos input tipo radio-->
+                    <!--Usamos el name para hacerlos excluyentes-->
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>   
+    
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="email" id="radio-telefono">Telefono</label>   
+    
+                    <label for="radio-Whatsapp"><input type="radio" name="contacto"  value="email" id="radio-Whatsapp" checked> Whatsapp</label> 
+                    <!--El checket es para marcarlo por defecto--> 
+                </fieldset>
+
+                <fieldset >
+                    <select class="lista"> <!--Etiqueta para lista desplegable-->
+                        <legend>¿En cuál horario prefiere ser atendido?</legend>
+                        <option>Mañama</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+                
+                <!--Para agregar un chek button rectangular usamos input tipo checkbox-->
+                <label class="checkbox"><input type="checkbox" checked> ¿Le gustaría recibir novedades de la barbería Alura?</label>
+                   <!--El checket es para marcarlo por defecto--> 
+
+
+                <input type="submit" value="Enviar Formulario" class="enviar">
+            </form>
+
+            <!--etiqueta table especifica para tablas-->
+            <table>
+                <!--en tablas tambien hay cabezas como thead y cuerpo como tbody-->
+                <thead>
+                    <tr> <!--para las filas -->
+                        <th>Día</th> <!-- para las columnas-->
+                        <th>Horario</th> <!-- para otra columna-->
+                    </tr>
+                </thead>
+               <tbody>
+                    <tr> 
+                        <td>Lunes</td> 
+                        <td>08h - 20h</td> 
+                    </tr>
+                    <tr> 
+                        <td>Martes</td> 
+                        <td>8h - 20h</td> 
+                    </tr>
+                    <tr> 
+                        <td>Miercoles</td> 
+                        <td>8h - 20h</td>
+                    </tr>
+
+               </tbody>
+                
+            </table>
+
+        </main>
+
+
+        <footer>
+            <img src="imagenes/logo-blanco.png"  alt="Logo de la barbería alura">
+            <p class="copyringht"> &copy Copyright Barberia alura 2022 </p>
+        </footer>
+    </body>
+</html>
